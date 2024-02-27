@@ -55,7 +55,7 @@ class MailExample extends Mailable
     public function attachments(): array
     {
         return [
-            Attachment::fromData(fn() => $this->mailData['pdf']->output(),'Report.pdf')->withMime('application/json')
+            Attachment::fromData(fn() => $this->mailData['pdf']->output(),'Report.pdf')->withMime('application/pdf')
         ];
     }
 }
